@@ -1,0 +1,144 @@
+body, html {
+    background-color: skyblue;
+    font-family: sans-serif;
+    background-image: url("/ams/res/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.fill {
+    z-index: 2000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.conIndex {
+    text-align: center;
+    z-index: 3000;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 40px 0px;
+    border-radius: 20px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+    width: 50%;
+    display: grid;
+    margin: 5% auto;
+    align-items: center;
+    justify-items: center;
+}
+
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.logoV {
+    width: 100px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.logoE {
+    width: 210px;
+    height: auto;
+    margin-left: 10px;
+    padding-bottom: 15px;
+}
+
+.logForm{
+    display: flex;
+    flex-direction: column;
+    padding: 15px 10px;
+    gap: 10px;
+}
+.meta-group{
+    margin-left: -50%;
+    width: 100%;
+}
+.floating-label {
+    position: relative;
+    width: 100%;
+}
+.floating-label input[type="text"],
+.floating-label input[type="password"],
+.floating-label input[type="email"] {
+    width: 200%;
+    height: 40px;
+    padding: 12px 10px;
+    font-size: 15px;
+    border: 1px solid #002848;
+    border-radius: 4px;
+    background: none;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+.floating-label input[type="text"]:focus,
+.floating-label input[type="password"]:focus,
+.floating-label input[type="email"]:focus {
+    outline: none;
+    border-color: gold;
+}
+.floating-label label {
+    position: absolute;
+    top: 13px;
+    left: 10px;
+    color: rgba(0, 40, 72, 0.5);
+    font-size: 14px;
+    pointer-events: none;
+    transition: all 0.2s ease;
+    background-color: transparent;
+    padding: 0 4px;
+    border-radius: 4px;
+}
+.floating-label input:focus + label,
+.floating-label input:not(:placeholder-shown) + label {
+    top: -11px;
+    left: 5px;
+    font-size: 14px;
+    color:black;
+    background-color: gold;
+    padding: 1px 5px 1px 5px;
+    border-radius: 2px;
+}
+.floating-label input:focus{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+input{
+    padding: 5px 10px;
+}
+#loginButton{
+    width: 200%;
+    height:35px;
+    font-weight: bolder;
+    font-size: 14px;
+    border: transparent;
+    border-radius: 10px;
+    background-color: #003d8b;
+    color: white;
+    align-self: center;
+}
+#loginButton:hover{
+    background-color: gold;
+    text-decoration: underline;
+    border: 1px solid #003d8b;
+    color: #003d8b;
+    transition: smooth;
+    transform: scale(1.015);
+}
+.forgetPass{
+    color: black ;
+    margin-bottom: 16px;
+    text-align: right;
+    text-decoration: none;
+}
+.forgetPass:hover{
+    text-decoration: underline;
+    filter: drop-shadow(0px 1px 2px rgba(0,0,0, 0.25));
+}

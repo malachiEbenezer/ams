@@ -1,0 +1,148 @@
+/*Menu*/
+* {
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body, html {
+    background-color: skyblue;
+    font-family: sans-serif;
+    background-image: url("/ams/res/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    size: cover;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.menu {
+    z-index: 3000;
+    top: 0;
+    left: -330px;
+    width: 330px;
+    height: 100%;
+    background-color: #f5f5f5;
+    color: #01018e;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: left 0.3s ease;
+    border-right: #01018e 3px solid;
+    box-sizing: border-box;
+}
+
+.user {
+    margin-top: -5px;
+    width: 100%;
+    border-bottom: #ccc 1px solid;
+    box-sizing: border-box;
+    padding: 3px 5px 3px 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.user-meta {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    padding-left: 5px;
+    padding-right: 30px;
+}
+
+#username {
+    font-weight: bold;
+}
+
+.user-icon {
+    z-index: 4000;
+    width: 75px;
+    height: auto;
+    color: #01018e;
+}
+
+.user-settings {
+    width: 35px;
+    height: auto;
+    color: #01018e;
+    padding-bottom: 5px;
+}
+
+.user:hover,
+.user-settings:hover,
+.user-icon:hover {
+    cursor: pointer;
+    color: #002848;
+    transition: background-color 0.3s, color 0.2s;
+    filter: drop-shadow(0 1px 2px 0 rgba(1, 1, 142, 0.5));
+    background-color: rgba(195, 225, 249, 1);
+}
+.menu-icon{
+    width: 30px;
+    padding: 4px;
+    margin: 2px 3px;
+}
+.menu-icon:hover{
+    cursor: pointer;
+    color: white;
+    background-color: rgba(1, 1, 142, 0.8);
+    transition: background-color 0.3s, color 0.2s;
+    border-radius: 5px;
+}
+a{
+    color: #01018e;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 5px;
+}
+a:hover{
+    cursor: pointer;
+    background-color: rgba(195, 225, 249, 1);
+    transition: background-color 0.3s, color 0.2s;
+}
+.menutabs{
+    margin-top: 8px;
+}
+
+.home-icon, .dashboard-icon, .register-icon, .borrowers-icon, .report-icon{
+    width: 41px;
+    padding-left: 5px;
+    padding-right: 15px;
+    margin-bottom: -5px;
+}
+.dashboard{
+    background-color: #01018e;
+    color: white;
+    font-weight: bold;
+}
+
+.dashboard:hover{
+    color: #01018e;
+    font-weight: lighter;
+    transition: background-color 0.3s, color 0.2s;
+}
+.menulinks{
+    align-items: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer{
+    text-align: center;
+    color: #002848;
+    bottom: 0;
+    margin-top: 330px;
+}
+.copyright{
+    font-size: 13px;
+}
+h3{
+    margin-bottom: 0;
+}
