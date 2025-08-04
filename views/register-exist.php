@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/ams/res/victory.fav.png" type="image/x-icon" />
     <link rel="stylesheet" href="/ams/css/register.css?v=<?php echo time(); ?>" type="text/css" />
+    <link rel="stylesheet" href="/ams/css/reg-exist.css?v=<?php echo time(); ?>" type="text/css" />
     <title>Registry | Attendance Management System</title>
 </head>
 
@@ -39,7 +40,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5M9 11.25v1.5M12 9v3.75m3-6v6" />
                         </svg>
                         Dashboard</a>
-                    <a href="/ams/views/register-rec.php" class="register" id="register">
+                    <a href="/ams/views/register-exist.php" class="register" id="register">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="register-icon">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z" />
                         </svg>
@@ -49,7 +50,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" d="m20.25 7.5-.625 10.632a2.25 2.25 0 0 1-2.247 2.118H6.622a2.25 2.25 0 0 1-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z" />
                         </svg>
                         Borrowers</a>
-                    <a href="/ams/views/report-eng.php" class="report" id="report">
+                    <a href="/ams/views/report-exist.php" class="report" id="report">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="report-icon">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941" />
                         </svg>
@@ -60,6 +61,24 @@
                 <h3>PANABO STUDENT CENTER ATTENDANCE MANAGEMENT SYSTEM</h3>
                 <label class="copyright">&#169 2025 IC Victory Groups. All rights reserved.</label>
             </div>
+        </div>
+    </div>
+    <div class="contentRec">
+        <div class="studentRef">
+            <div class="exist" id="exist">
+                <a class="existLink" id="existLink" href="register-exist.php">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="check size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                </svg> &nbsp;&nbsp;
+                Students</a></div>
+            <div class="new" id="new">
+                <a class="newLink" href="register-new.php">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="check size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                </svg> &nbsp;&nbsp;
+                Register +</a>
+            </div>
+            <script src="/ams/js/clickableArea.js"></script>
         </div>
     </div>
 

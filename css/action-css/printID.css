@@ -1,0 +1,74 @@
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+.id-card {
+    width: 350px;
+    height: 220px;
+    background-color: #0b1a4d;
+    border-radius: 15px;
+    color: white;
+    padding: 15px;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.id-card .photo {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 90px;
+    height: 110px;
+    border-radius: 10px;
+    border: 3px solid white;
+    object-fit: cover;
+    background-color: white;
+}
+
+.id-card .details {
+    margin-left: 115px;
+    padding-top: 10px;
+}
+
+.id-card .details h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px black;
+}
+
+.id-card .details p {
+    margin: 4px 0;
+    font-size: 14px;
+    text-shadow: 1px 1px 2px black;
+}
+
+.id-card .barcode-container {
+    position: absolute;
+    bottom: 15px;
+    left: 115px;
+    right: 15px;
+    text-align: center;
+}
+
+#barcode {
+    width: 200px;
+    height: 50px;
+}
+
+.print-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #003d8b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.print-button:hover {
+    background-color: gold;
+    color: #002848;
+}

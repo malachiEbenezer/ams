@@ -107,7 +107,7 @@ a {
     padding: 8px 5px;
 }
 
-a:hover {
+.home:hover, .dashboard:hover, .register:hover, .borrowers:hover, .report:hover {
     cursor: pointer;
     background-color: rgba(195, 225, 249, 1);
     transition: background-color 0.3s, color 0.2s;
@@ -174,6 +174,26 @@ h3 {
     border-radius: 20px;
     border: #002848 3px solid;
     overflow: auto;
+    scrollbar-gutter: stable; /* Ensures scrollbar doesn't overlap with border radius */
+    padding: 15px; /* Increased padding to ensure content doesn't touch the border and scrollbar stays within radius */
+}
+
+/* WebKit scrollbar styling to ensure it fits within border radius */
+.contentRec::-webkit-scrollbar {
+    width: 12px;
+}
+
+.contentRec::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 20px;
+    margin: 10px 0; /* Add margin to keep scrollbar within border radius */
+}
+
+.contentRec::-webkit-scrollbar-thumb {
+    background: #002848;
+    border-radius: 6px;
+    border: 3px solid white;
+    min-height: 30px; /* Ensure minimum height for thumb */
 }
 
 .studentForm,
@@ -410,4 +430,33 @@ h3 {
 
 #em_address{
     width: 300%;
+}
+.checkList{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 200px;
+}
+
+.checkVG, .check121{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 15px;
+}
+.engageCheck{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding-top: 10px;
+}
+select{
+    width: 400px;
+    height: 40px;
+    padding: 5px 10px;
+    border: #002848 1px solid;
+    color: #002848;
+    border-radius: 5px;
+}
+.val{
+    padding: 10px 20px;
 }
