@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="/ams/css/reg-new.css?v=<?php echo time(); ?>" type="text/css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jsbarcode/3.11.5/JsBarcode.all.min.js"></script>
     <script src="/ams/js/barcodeGenerator.js"></script>
+    <!--Bootstrap-->
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
+    <!--JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>New Registration | Attendance Management System</title>
 </head>
 
@@ -126,7 +130,7 @@
                     <div class="plusInfo">
                         <div class="meta-group">
                             <div class="floating-label">
-                                <input type="text" class="suffix" id="suffix" name="suffix" placeholder=" " required>
+                                <input type="text" class="suffix" id="suffix" name="suffix" placeholder=" ">
                                 <label for="suffix">Suffix</label>
                             </div>
                         </div>
@@ -176,26 +180,30 @@
                     <div class="reside">
                         <div class="meta-group">
                             <div class="floating-label">
-                                <input type="text" name="region" id="region" placeholder=" " required>
+                                <select name="region" id="region"></select>
+                                <input type="hidden" name="region" id="region-text" required>
                                 <label for="region">Region</label>
                             </div>
                         </div>
                         <div class="meta-group">
                             <div class="floating-label">
-                                <input type="text" name="province" id="province" placeholder=" " required>
+                                <select name="province" id="province"></select>
+                                <input type="hidden" name="province" id="province-text" required>
                                 <label for="province">Province</label>
                             </div>
                         </div>
                         <div class="meta-group">
                             <div class="floating-label">
-                                <input type="text" name="cityMun" id="cityMun" placeholder=" " required>
-                                <label for="cityMun">City/Municipality</label>
+                                <select name="city" id="city"></select>
+                                <input type="hidden" name="city" id="city-text" required>
+                                <label for="city">City/Municipality</label>
                             </div>
                         </div>
                         <div class="meta-group">
                             <div class="floating-label">
-                                <input type="text" name="brgy" id="brgy" placeholder=" " required>
-                                <label for="brgy">Barangay</label>
+                                <select name="barangay"  id="barangay"></select>
+                                <input type="hidden"  name="barangay" id="barangay-text" required>
+                                <label for="barangay">Barangay</label>
                             </div>
                         </div>
                         <div class="meta-group">
@@ -204,6 +212,7 @@
                                 <label for="specAdd">Street, Purok</label>
                             </div>
                         </div>
+                        <script src="/ams/js/ph-address-selector.js"></script>
                     </div>
                 </div>
             </div>
@@ -213,8 +222,11 @@
                 <div class="emerge">
                     <div class="meta-group">
                         <div class="floating-label">
-                            <input type="text" name="relation" id="relation" placeholder="" required>
-                            <label for="relation">Relationship</label>
+                            <select name="relation" id="relation" placeholder="Select relationship" required>
+                                <option class="val" value="null">Select relationship</option>
+                                <option class="val" value="Parent">Parent</option>
+                                <option class="val" value="Guardian">Guardian</option>
+                            </select>
                         </div>
                     </div>
                     <div class="meta-group">
@@ -243,8 +255,12 @@
                 <div class="engageCheck">
                     <div class="checkList">
                         <div class="check">
-                            <input type="checkbox" name="checkEngage" id="checkEngage" value="Orientation">
+                            <input type="checkbox" name="checkEngage" id="checkEngage" value="Orientation" required>
                             <label for="checkEngage">Orientation</label>
+                        </div>
+                        <div class="check">
+                            <input type="checkbox" name="checkEngage" id="checkEngage" value="With Student Card" required>
+                            <label for="checkEngage">With Student Card</label>
                         </div>
                         <div class="check">
                             <input type="checkbox" name="checkEngage" id="checkEngage" value="Tutorials">
@@ -263,20 +279,20 @@
                         <div class="checkVG">
                             <label for="victoryGroup">Victory Group Leader: </label>
                             <select name="vg_lead" id="victoryGroup">
-                                <option class="val" value="null">Select Victory Group Leader</option>
+                                <option class="val" id="valNull" value="null">Select Victory Group Leader</option>
                             </select>
                         </div>
                         <div class="check121">
                             <label for="one2One">One-2-One Leader: </label>
                             <select name="one2one_lead" id="one2one">
-                                <option class="val" value="null">Select Leader</option>
+                                <option class="val" id="valNull" value="null">Select Leader</option>
                             </select>
                         </div>
-                    </div>                 
+                    </div>
                     <div class="checkBarcode" id="checkBarcode">
                         <button type="button" id="generateBarcodeBtn">Generate Barcode</button>
-                        
-                    </div>                    
+
+                    </div>
                 </div>
             </div>
             <button class="printID" id="printID" onclick="printID()">Print ID</button>
