@@ -59,8 +59,12 @@ body, html {
 
 #username {
     font-weight: bold;
+    font-size: 15px;
 }
 
+#email{
+    font-size: 13px;
+}
 .user-icon {
     z-index: 4000;
     width: 75px;

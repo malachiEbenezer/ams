@@ -6,10 +6,15 @@ if (isset($_SESSION['user'])) {
     // Log the redirection for already logged in users
     error_log("User  already logged in: username={$_SESSION['user']['username']}, user_type={$_SESSION['user']['user_type']}, user_id={$_SESSION['user']['user_id']}");
 
-    // Prepare raw values with boundary characters for URL
+   /* // Prepare raw values with boundary characters for URL
     $user_type_id_val =  $_SESSION['user']['user_type_id'] . '-';
     $user_type_val = $_SESSION['user']['user_type'] . '-';
-    $user_id_val = $_SESSION['user']['user_id'] . '-';
+    $user_id_val = $_SESSION['user']['user_id'] . '-';*/
+     // Redirect with username in URL
+        $username = urlencode($row['username']);
+        $user_type = urlencode($row['user_type']);
+        $user_type_id = urlencode($row['user_type_id']);
+        $user_id = urlencode($row['user_id']);
 
     // Redirect based on user type with raw values and boundaries in URL
     $user_type_lower = strtolower($_SESSION['user']['user_type']);
@@ -17,7 +22,7 @@ if (isset($_SESSION['user'])) {
         case 'superadmin':
         case 'admin':
         case 'student':
-            header("Location: /ams/views/home.php?{$user_type_id_val}&{$user_type_val}&{$user_id_val}");
+            header("Location: /ams/views/home.php?user_type_id={$user_type_id}&user_type={$user_type}&user_id={$user_id}&username={$username}");
             exit;
         default:
             // Log an unexpected user type, destroy session and redirect to login with error
