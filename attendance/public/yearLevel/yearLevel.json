@@ -1,0 +1,19 @@
+{
+    "Junior High School": [
+        "Grade 7",
+        "Grade 8",
+        "Grade 9",
+        "Grade 10"
+    ],
+    "Senior High School": [
+        "Grade 11",
+        "Grade 12"
+    ],
+    "College": [
+        "First Year",
+        "Second Year",
+        "Third Year",
+        "Fourth Year",
+        "Fifth Year"
+    ]
+}

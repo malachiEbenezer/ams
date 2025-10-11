@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+@import '../../../../vendor/filament/filament/resources/css/base.css';
+
+@config 'tailwind.config.js';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --f-background: #1e3a8a; /* Deep blue */
+}
+.filament-sidebar {
+    background-color: #1e3a8a !important;
+}
+
+.filament-header {
+    background-color: #1e3a8a !important;
+    color: white;
+}
